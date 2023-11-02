@@ -1,28 +1,13 @@
-﻿@model List<Planet>
+﻿@model PlanetsViewModel
 
-<h2>Far Far Away Galaxy Planets</h2>
-
-The planets of the star wars galaxy should be here!
+@{
+    ViewBag.Title = "Planets";
+}
 
 <h2>Milky Way Planets</h2>
+@Html.Partial("_MilkyWayPlanets", Model.MilkyWayPlanets)
 
-<table class="table">
-    <thead>
-        <tr>
-            <th scope="col">Name</th>
-            <th scope="col">Population</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var planet in Model)
-        {
-            <tr>
-                <td>@planet.Name</td>
-                <td>@planet.Population</td>
-            </tr>  
-        }
-    </tbody>
-</table>
-
+<h2>Star Wars Planets</h2>
+@Html.Partial("_StarWarsPlanets", Model.StarWarsPlanets)
 
 
