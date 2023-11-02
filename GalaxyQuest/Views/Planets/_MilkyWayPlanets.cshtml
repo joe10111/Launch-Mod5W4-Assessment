@@ -1,0 +1,6 @@
+﻿@model List<Planet>
+
+@foreach (var planet in Model)
+{
+    <p>@planet.Name (Population: @planet.Population)</p>
+}
